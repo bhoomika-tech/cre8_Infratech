@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive navigation bar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <!-- aos css cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- counterup animation links -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+
+  <!-- swiper slider style link -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- jquery plugins -->
+  <link rel="stylesheet" href="css/slick.css">
+</head>
+
+<body>
+
+  	<!-- social icons -->
+	<nav class="icons">
+		<ul>
+			<li><a href="#"><i class="fab fa-facebook color"></i></a></li>
+			<li><a href="#"><i class="fab fa-instagram color"></i></a></li>
+			<li><a href="#"><i class="fab fa-youtube color"></i></a></li>
+			<li><a href="#"><i class="fab fa-linkedin-in color"></i></a></li>
+		</ul>
+	</nav>
+	<!-- social ends -->
+
+  <a href="index.html" class="logo"><img src="images/Cre8_Logo.png" alt=""></a>
+  <header>
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar"><i class="fas fa-bars"></i></label>
+    <nav class="navbar" data-aos="fade-top">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="#">services <i class="fas fa-caret-down"></i></a>
+          <ul>
+            <li><a href="#" id="ser">building consultation <i class="fas fa-caret-down"></i></a>
+              <ul class="servi">
+                <li><a href="#"><i class="fas fa-caret-right"></i> Architectural Design</a></li>
+                <li><a href="#"><i class="fas fa-caret-right"></i> structural Design</a></li>
+                <li><a href="#"><i class="fas fa-caret-right"></i> plumbing and electrical layouts</a></li>
+              </ul>
+            </li>
+            <li><a href="#">building construction <i class="fas fa-caret-down"></i></a>
+              <ul>
+                <li><a href="#"><i class="fas fa-caret-right"></i> construction</a></li>
+                <li><a href="#"><i class="fas fa-caret-right"></i> renovation</a></li>
+                <li><a href="#"><i class="fas fa-caret-right"></i> retrofitting</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Interiors</a></li>
+          </ul>
+        </li>
+        <li><a href="#">packages <i class="fas fa-caret-down"></i></a>
+          <ul>
+            <li><a href="#"><i class="fas fa-caret-right"></i> basic package</a></li>
+            <li><a href="#"><i class="fas fa-caret-right"></i> classic package</a></li>
+            <li><a href="#"><i class="fas fa-caret-right"></i> premium package</a></li>
+            <li><a href="#"><i class="fas fa-caret-right"></i> custom package</a></li>
+            <li><a href="#"><i class="fas fa-caret-right"></i> Architectural & Engineering</a></li>
+            <li><a href="#"><i class="fas fa-caret-right"></i> Interior design execution</a></li>
+          </ul>
+        </li>
+        <li><a href="#">projects</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="home" id="home">
+    <div class="video-container">
+      <video autoplay muted loop class="video">
+        <source src="images/omkar.mp4" />
+      </video>
+    </div>
+  </div>
+
+  <div class="about" id="about">
+    <div class="about-container">
+      <div class="about-section">
+        <div class="content" data-aos="fade-right">
+          <h1><span class="color">ABOUT CRE8</span></h1>
+          <p>We can take your home from concept to reality.<br>
+            We bring a holistic new approach when it comes to execution with stringent quality control and professional
+            supervision, you will get what you were promised on-time, every time.
+          </p>
+          <a href="about.html#about-us" class="hero-btn"><span class="color">know more about CRE8</span></a>
+        </div>
+      </div>
+      <div class="image-section" data-aos="fade-top">
+        <img src="images/int_Pavan_9.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- counter up animation about.html -->
+  <div class="counter-up">
+    <div class="content">
+      <div class="box" data-aos="fade-bottom">
+        <div class="icon"><span class="color"><i class="fas fa-award"></i></span></div>
+        <div class="counter">20</div>
+        <div class="text">Years of experience</div>
+      </div>
+      <div class="box" data-aos="fade-bottom">
+        <div class="icon"><span class="color"><i class="fas fa-gift"></i></span></div>
+        <div class="counter">150</div>
+        <div class="text">Projects Completed</div>
+      </div>
+      <div class="box" data-aos="fade-bottom">
+        <div class="icon"><span class="color"><i class="fas fa-history"></i></span></div>
+        <div class="counter">10</div>
+        <div class="text">ongoing projects</div>
+      </div>
+      <div class="box" data-aos="fade-bottom">
+        <div class="icon"><span class="color"><i class="fas fa-users"></i></span></div>
+        <div class="counter">40</div>
+        <div class="text">active workers</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $('.counter').each(function () {
+        $(this).prop('Counter', 0).animate({
+          Counter: $(this).text()
+        }, {
+          duration: 15000,
+          easing: 'swing',
+          step: function (now) {
+            $(this).text(Math.ceil(now) + '+');
+          }
+        })
+      });
+    });
+  </script>
+  <!-- counter up animation about.html -->
+
+
+  <!-- why choose us section about.html-->
+  <!-- <div class="choose-container">
+    <h1>why choose <span class="color">cre8?</span></h1>
+
+    <div class="why-container">
+      <div class="box" data-aos="fade-bottom">
+        <img src="images/medal.png" alt="">
+        <p>We are a tech construction company</p>
+      </div>
+
+      <div class="box" data-aos="fade-bottom">
+        <img src="images/goal.png" alt="">
+        <p>One stop shop for all construction needs</p>
+      </div>
+
+      <div class="box" data-aos="fade-bottom">
+        <img src="images/bitcoin.png" alt="">
+        <p>Highest standards of building workmanship at
+          the best value for money
+        </p>
+      </div>
+
+      <div class="box" data-aos="fade-bottom">
+        <img src="images/time-left.png" alt="">
+        <p>Timely management of works using Project
+          management software, so that schedule is not
+          delayed</p>
+      </div>
+
+    </div>
+
+  </div> -->
+  <!-- why choose us section ends about.html-->
+
+
+  <!-- home auto swiper images starts index.html -->
+  <div class="team-slide-images" id="team">
+    <!-- <h1>A<span>adhya</span> S<span>trength</span></h1> -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <ul class="cards">
+            <li>
+              <div class="card">
+                <h4><span class="color">Mr. XYZ</span> - <span class="color">JP Nagar</span></h4>
+                <img src="images/int_Pavan_11.jpg" alt="" class="card_img">
+                <div class="card_overlay">
+                  <h3 class="card_title"><span class="color">View</span> </h3>
+                  <!-- <div class="card_status">JP Nagar</div> -->
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-slide">
+          <ul class="cards">
+            <li>
+              <div class="card">
+                <h4><span class="color">Mr. XYZ</span> - <span class="color">JP Nagar</span></h4>
+                <img src="images/int_Pavan_11.jpg" alt="" class="card_img">
+                <div class="card_overlay">
+                  <h3 class="card_title"><span class="color">View</span> </h3>
+                  <!-- <div class="card_status">JP Nagar</div> -->
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-slide">
+          <ul class="cards">
+            <li>
+              <div class="card">
+                <h4><span class="color">Mr. XYZ</span> - <span class="color">JP Nagar</span></h4>
+                <img src="images/int_Pavan_11.jpg" alt="" class="card_img">
+                <div class="card_overlay">
+                  <h3 class="card_title"><span class="color">View</span> </h3>
+                  <!-- <div class="card_status">JP Nagar</div> -->
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-slide">
+          <ul class="cards">
+            <li>
+              <div class="card">
+                <h4><span class="color">Mr. XYZ</span> - <span class="color">JP Nagar</span></h4>
+                <img src="images/int_Pavan_11.jpg" alt="" class="card_img">
+                <div class="card_overlay">
+                  <h3 class="card_title"><span class="color">View</span> </h3>
+                  <!-- <div class="card_status">JP Nagar</div> -->
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-slide">
+          <ul class="cards">
+            <li>
+              <div class="card">
+                <h4><span class="color">Mr. XYZ</span> - <span class="color">JP Nagar</span></h4>
+                <img src="images/int_Pavan_11.jpg" alt="" class="card_img">
+                <div class="card_overlay">
+                  <h3 class="card_title"><span class="color">View</span> </h3>
+                  <!-- <div class="card_status">JP Nagar</div> -->
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-slide">
+          <ul class="cards">
+            <li>
+              <div class="card">
+                <h4><span class="color">Mr. XYZ</span> - <span class="color">JP Nagar</span></h4>
+                <img src="images/int_Pavan_11.jpg" alt="" class="card_img">
+                <div class="card_overlay">
+                  <h3 class="card_title"><span class="color">View</span> </h3>
+                  <!-- <div class="card_status">JP Nagar</div> -->
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="swiper-button-next next"></div>
+      <div class="swiper-button-prev prev"></div>
+    </div>
+  </div>
+  <!-- home auto swiper images ends index.html -->
+
+
+  <!-- footer section index.html starts -->
+  <footer class="footer-distributed">
+    <div class="footer-left">
+        <img src="images/Cre8_Logo.png" alt="">
+        <p class="footer-links">
+            <a href="index.html"><span class="color"> Home</span></a>
+            |
+            <a href="index.html#about"><span class="color"> About</span></a>
+            |
+            <a href="services.html"><span class="color"> Services</span></a>
+            |
+            <a href="projects.html"><span class="color"> Packages</span></a>
+            |
+            <a href="about.html"><span class="color"> Projects</span></a>
+            |
+            <a href="contact.html"><span class="color"> Contact</span></a>
+        </p>
+
+        <p class="footer-company-name">Copyright © 2022 <strong>cre8_infratech</strong> All rights reserved</p>
+    </div>
+
+    <div class="footer-center">
+        <div>
+            <span class="color"><i class="fa fa-map-marker"></i></span>
+            <p><a>JP Nagar 2nd Phase,<br> Bengauru - 560078</a></p>
+        </div>
+
+        <div>
+            <span class="color"><i class="fa fa-phone"></i></span>
+            <p><a href="tel:+91 9916474734">+91 9916474734</a> <br> <a href="tel:+91 8217828727">+91 8217828727</a><br>
+            </p>
+            <!-- <a href="tel:+91 9901453181">+91 9901453181</a> -->
+        </div>
+        <div>
+            <span class="color"> <i class="fa fa-envelope"></i></span>
+            <p><a href="mailto:info@cre8infratech.com">info@cre8infratech.com</a></p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <!-- <img src="images/Cre8_Logo.png" alt=""> -->
+        <div class="footer-icons">
+          <a href="#"><span class="color"><i class="fab fa-facebook"></i></span> </a>
+          <a href="#"><span class="color"><i class="fab fa-instagram"></i></span></a>
+          <a href="#"><span class="color"><i class="fab fa-linkedin"></i></span></a>
+          <a href="#"><span class="color"><i class="fab fa-youtube"></i></span></a>
+  </div>
+    </div>
+</footer>
+  <!-- footer section index.html starts -->
+
+
+
+
+
+
+  <!-- aos js cdn link  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- initializing aos  -->
+  <script>
+    AOS.init({
+      delay: 400,
+      duration: 1000
+    })
+  </script>
+  <!-- initializing aos  -->
+
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      loop: true,
+      spaceBetween: 10,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        550: {
+          slidesPerView: 2,
+        },
+        800: {
+          slidesPerView: 3,
+        },
+        1000: {
+          slidesPerView: 3,
+        },
+        1550: {
+          slidesPerView: 4,
+        },
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+
+</html>
